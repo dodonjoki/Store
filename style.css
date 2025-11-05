@@ -1,0 +1,225 @@
+/* 🎣 JOKI DAFZX STORE v100.1 PROMAX+ */
+/* Tema Glass Neon Hijau + Background Animasi Bubble */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top, #001a00, #000);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+canvas#bubble-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.glow {
+  color: #00ff99;
+  text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.tagline {
+  color: #aaffcc;
+  font-size: 0.95rem;
+}
+
+.promo-bar {
+  text-align: center;
+  background: rgba(0, 255, 153, 0.15);
+  color: #00ff99;
+  padding: 10px;
+  margin: 15px auto;
+  border-radius: 10px;
+  width: 90%;
+  font-weight: 600;
+  border: 1px solid #00ff99;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+main {
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  margin: 20px auto;
+  width: 95%;
+  max-width: 700px;
+  background: rgba(0, 40, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0,255,150,0.3);
+}
+
+h2 {
+  color: #00ff99;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ff99;
+}
+
+/* Produk */
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.produk-card {
+  background: rgba(0, 255, 150, 0.05);
+  border: 1px solid rgba(0, 255, 150, 0.3);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 10px rgba(0,255,150,0.2);
+}
+
+.produk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00ff99;
+}
+
+.produk-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.produk-card h3 {
+  color: #00ff99;
+  margin-bottom: 3px;
+}
+
+.produk-card p {
+  font-size: 0.9rem;
+  color: #ccffdd;
+}
+
+.produk-card button {
+  background: #00ff99;
+  border: none;
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.produk-card button:hover {
+  background: #33ffaa;
+}
+
+/* Cart & Review */
+#cartList li {
+  list-style: none;
+  background: rgba(0,255,150,0.1);
+  padding: 5px 8px;
+  border-radius: 8px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#cartList button {
+  background: red;
+  border: none;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.review-item {
+  background: rgba(0,255,150,0.08);
+  margin-top: 8px;
+  border-radius: 10px;
+  padding: 8px;
+  border-left: 3px solid #00ff99;
+}
+
+/* Admin */
+.admin-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #00ff99;
+  border: none;
+  color: #000;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ff99;
+  z-index: 10;
+}
+
+.admin-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.admin-content {
+  background: #001a00;
+  color: #00ff99;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 20px #00ff99;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #99ffcc;
+  z-index: 2;
+  position: relative;
+}
+
+/* VTuber */
+#vtuberContainer img {
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .glow { font-size: 1.4rem; }
+  .produk-card { padding: 8px; }
+  .admin-button { width: 45px; height: 45px; font-size: 1.2rem; }
+}
