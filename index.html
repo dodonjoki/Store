@@ -3,58 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JOKI DAFZX STORE v100.1 PROMAX+</title>
-  <link rel="stylesheet" href="style.css">
+  <title>🐟 JOKI DAFZX STORE v100.1 PROMAX+</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at center, #001100, #000000);
+      color: #bfffd1;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* animasi background neon gelombang */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(0,255,100,0.3), transparent 70%);
+      animation: pulse 5s infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(1); }
+      100% { opacity: 0.6; transform: scale(1.2); }
+    }
+
+    h1 {
+      font-size: 1.8em;
+      color: #00ff9d;
+      text-shadow: 0 0 10px #00ff9d, 0 0 25px #00ff9d;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ff9d, 0 0 15px #00ff9d; }
+      to { text-shadow: 0 0 25px #00ff9d, 0 0 45px #00ff9d; }
+    }
+
+    .card {
+      background: rgba(0, 50, 0, 0.6);
+      border: 1px solid #00ff9d;
+      border-radius: 15px;
+      margin: 20px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0,255,100,0.3);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0,255,100,0.7);
+    }
+
+    button {
+      background: #00ff9d;
+      color: #000;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 0 15px #00ff9d;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #00ffaa;
+      box-shadow: 0 0 25px #00ffaa;
+    }
+
+    .admin-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00ff9d;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-weight: 700;
+      box-shadow: 0 0 15px #00ff9d;
+    }
+
+    .btn-glass {
+      background: rgba(0,255,157,0.15);
+      border: 1px solid #00ff9d;
+      border-radius: 15px;
+      padding: 10px 25px;
+      margin-top: 10px;
+      box-shadow: 0 0 20px rgba(0,255,157,0.3);
+      backdrop-filter: blur(5px);
+      color: #00ff9d;
+      font-weight: bold;
+    }
+
+    .section-title {
+      font-size: 1.5em;
+      margin-top: 40px;
+      color: #00ff9d;
+      text-shadow: 0 0 10px #00ff9d;
+    }
+  </style>
 </head>
 <body>
-  <canvas id="bubble-bg"></canvas>
+  <h1>🐟 JOKI DAFZX STORE v100.1 PROMAX+</h1>
+  <p>Fish It Edition — Cepat, Aman, Murah!</p>
+  <div class="btn-glass">🧊 Dafzx v100 PROMAX Glass Edition</div>
 
-  <header class="header">
-    <h1 class="glow">🎣 JOKI DAFZX STORE v100.1 PROMAX+</h1>
-    <p class="tagline">Fish It Edition — Cepat, Aman, Murah!</p>
-  </header>
+  <div class="section-title">🛍️ Etalase Produk</div>
 
-  <div class="promo-bar" id="promoText">🔥 Diskon 10% pakai kode DAFZX2025!</div>
-
-  <main>
-    <section id="produkSection">
-      <h2>🛍️ Etalase Produk</h2>
-      <div id="produkList" class="produk-container"></div>
-    </section>
-
-    <section id="cartSection">
-      <h2>🧺 Keranjang</h2>
-      <ul id="cartList"></ul>
-      <p><strong>Total:</strong> <span id="totalHarga">Rp0</span></p>
-      <button onclick="checkout()">Checkout via WhatsApp</button>
-    </section>
-
-    <section id="reviewSection">
-      <h2>⭐ Review Pelanggan</h2>
-      <form id="reviewForm" onsubmit="kirimReview(event)">
-        <input id="reviewNama" placeholder="Nama kamu">
-        <textarea id="reviewText" placeholder="Tulis review kamu..."></textarea>
-        <button type="submit">Kirim Review</button>
-      </form>
-      <div id="reviewList"></div>
-    </section>
-  </main>
-
-  <button class="admin-button" onclick="bukaAdmin()">👑 Admin</button>
-  <div class="admin-panel" id="adminPanel">
-    <div class="admin-content">
-      <h2>Panel Admin</h2>
-      <div id="adminMenu"></div>
-    </div>
+  <div class="card">
+    <h3>Astral Rod</h3>
+    <p>Pancing langka untuk mancing dewa 🐠</p>
+    <p><b>Rp15.000</b></p>
+    <button>Tambah</button>
   </div>
 
-  <div id="vtuberContainer"></div>
+  <div class="card">
+    <h3>Ares Rod</h3>
+    <p>Senjata para pemancing profesional 💪</p>
+    <p><b>Rp20.000</b></p>
+    <button>Tambah</button>
+  </div>
 
-  <footer>
-    <p>© 2025 Dafzx Joki & Store | All Rights Reserved</p>
-  </footer>
-
-  <audio id="clickSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_f7b4d39a8a.mp3?filename=click-124467.mp3" preload="auto"></audio>
-  <script src="script.js"></script>
+  <div class="admin-badge">👑 Admin</div>
 </body>
-        </html>
+</html>
